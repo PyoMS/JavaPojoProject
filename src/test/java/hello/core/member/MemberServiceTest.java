@@ -2,8 +2,10 @@ package hello.core.member;
 
 
 import hello.core.AppConfig;
+import hello.core.singleton.SingletonService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
@@ -15,8 +17,9 @@ public class MemberServiceTest {
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
     }
+
     @Test
-    void joint(){
+    void joint() {
         //given
         Member member = new Member(1L, "memberA", Grade.VIP);
         //when
